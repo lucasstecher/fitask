@@ -1,1 +1,5 @@
 rootProject.name = 'FiTask'
+
+include('api')
+include('core')
+include('security')
