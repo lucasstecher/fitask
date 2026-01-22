@@ -1,5 +1,5 @@
 CREATE TYPE task_status as ENUM ('TODO', 'IN_PROGRESS', 'REVIEW', 'DONE');
-CREATE TYPE priority as ENUM ('LOW', 'MEDIUM', 'HIGH', 'CRITICAL')
+CREATE TYPE priority as ENUM ('LOW', 'MEDIUM', 'HIGH', 'CRITICAL');
 
 CREATE TABLE tasks (
     id UUID PRIMARY KEY,
@@ -12,5 +12,5 @@ CREATE TABLE tasks (
     project_id UUID NOT NULL,
     due_date TIMESTAMPTZ NOT NULL,
     created_at TIMESTAMPTZ NOT NULL,
-    updated_at TIMESTAMPTZ NOT NULL,
+    updated_at TIMESTAMPTZ NOT NULL
 );
