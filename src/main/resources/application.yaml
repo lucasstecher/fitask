@@ -10,3 +10,10 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    user: postgres
+    password: 1234
+    schemas: fitask
+    enabled: true
+server:
+  port: 8082
