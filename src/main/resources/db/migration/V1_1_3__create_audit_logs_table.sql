@@ -1,4 +1,4 @@
-CREATE TYPE action as ENUM ('CREATE', 'UPDATE', 'DELETE')
+CREATE TYPE action as ENUM ('CREATE', 'UPDATE', 'DELETE');
 
 CREATE TABLE audit_logs (
     id UUID PRIMARY KEY,

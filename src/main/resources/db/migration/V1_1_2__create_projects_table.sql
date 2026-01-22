@@ -4,5 +4,5 @@ CREATE TABLE projects (
     description TEXT NOT NULL,
     owner_id UUID NOT NULL,
     active BOOLEAN NOT NULL,
-    created_at TIMESTAMPTZ NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL
 );
