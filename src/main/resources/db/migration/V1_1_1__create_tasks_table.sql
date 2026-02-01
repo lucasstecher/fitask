@@ -7,9 +7,9 @@ CREATE TABLE tasks (
     description TEXT NOT NULL,
     status task_status NOT NULL,
     priority priority NOT NULL,
-    assigned_to_id UUID NOT NULL,
-    created_by_id UUID NOT NULL,
-    project_id UUID NOT NULL,
+    assigned_to_id UUID NOT NULL REFERENCES users(id),
+    created_by_id UUID NOT NULL REFERENCES users(id),
+    project_id UUID NOT NULL REFERENCES projects(id),
     due_date TIMESTAMPTZ NOT NULL,
     created_at TIMESTAMPTZ NOT NULL,
     updated_at TIMESTAMPTZ NOT NULL
