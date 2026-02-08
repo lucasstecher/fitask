@@ -7,6 +7,8 @@ import org.hibernate.annotations.JdbcType;
 import org.hibernate.dialect.PostgreSQLEnumJdbcType;
 
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 
@@ -18,6 +20,15 @@ import java.util.UUID;
                 @UniqueConstraint(columnNames = "username")
         })
 public class UserEntity {
+    @OneToMany(mappedBy = "assignedTo")
+    private List<TaskEntity> assignedTasks = new ArrayList<>();
+
+    @OneToMany(mappedBy = "createdBy")
+    private List<TaskEntity> createdTasks = new ArrayList<>();
+
+    @OneToMany(mappedBy = "owner")
+    private List<ProjectEntity> createdProjects = new ArrayList<>();
+
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
